@@ -1,14 +1,277 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصتنا المدرسية</title>
+
+<style>
+:root {
+  --main: #386b65;
+  --light: #edf5f1;
+  --accent: #d9b982;
+  --text: #283a37;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: #f7f8f5;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+header {
+  background: var(--white);
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid #e5eae6;
+}
+
+.logo {
+  color: var(--main);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--main);
+}
+
+.hero {
+  margin: 28px auto;
+  width: 88%;
+  padding: 55px 25px;
+  border-radius: 22px;
+  text-align: center;
+  background: var(--light);
+}
+
+.hero h1 {
+  color: var(--main);
+  font-size: 34px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 22px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--main);
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 9px;
+}
+
+section {
+  width: 88%;
+  margin: 45px auto;
+  scroll-margin-top: 20px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--main);
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 15px;
+  border: 1px solid #e6ebe7;
+  box-shadow: 0 4px 15px #243c3010;
+}
+
+.card .icon {
+  font-size: 32px;
+}
+
+.card h3 {
+  color: var(--main);
+  margin: 8px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #566560;
+}
+
+footer {
+  background: var(--main);
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 55px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+}
+</style>
+</head>
 
 <body>
 
-<h1>My First Heading</h1>
-  
-<p>My First paragraph.</p>
-  
-<p> My new paragraph.</p>
+<header>
+  <div class="logo">✦ منصتنا المدرسية</div>
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#initiatives">المبادرات</a>
+    <a href="#honors">التكريمات</a>
+    <a href="#activities">الأنشطة</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero" id="home">
+    <h1>أهلًا بكم في منصتنا المدرسية</h1>
+    <p>
+      مساحة رقمية تجمع مبادراتنا وإنجازاتنا،
+      وتوثّق جهود منسوبات المدرسة،
+      وتحتفي بكل خطوة نحو التميز والإبداع.
+    </p>
+    <a class="button" href="#initiatives">اكتشفي أقسام المنصة</a>
+  </div>
+
+  <section id="initiatives">
+    <h2 class="section-title">🌱 المبادرات المدرسية</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">💐</div>
+        <h3>مبادرة شكرًا لكم</h3>
+        <p>
+          تكريم الموظفة المتعاونة أو المتميزة
+          شهريًا تقديرًا لجهودها وعطائها.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🤝</div>
+        <h3>روح الفريق</h3>
+        <p>
+          تعزيز التعاون وتبادل الخبرات
+          بين منسوبات المدرسة.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🌟</div>
+        <h3>نحو التميز</h3>
+        <p>
+          تشجيع الأفكار الإبداعية
+          والممارسات المدرسية المتميزة.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="honors">
+    <h2 class="section-title">🏆 التكريمات والإنجازات</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">🌷</div>
+        <h3>موظفة الشهر</h3>
+        <p>
+          نحتفي بالعطاء والإخلاص،
+          ونقدّر كل من تسهم في نجاح مدرستنا.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🎖️</div>
+        <h3>إنجازاتنا</h3>
+        <p>
+          توثيق الإنجازات والنجاحات
+          والمشاركات المدرسية المتميزة.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="activities">
+    <h2 class="section-title">🎨 الأنشطة والفعاليات</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">📸</div>
+        <h3>فعاليات المدرسة</h3>
+        <p>
+          مساحة لعرض الفعاليات والمناسبات
+          والتجارب التعليمية المميزة.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">📚</div>
+        <h3>المشاركات التعليمية</h3>
+        <p>
+          استعراض المبادرات التعليمية
+          والأنشطة الهادفة والإبداعية.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">📩 تواصل معنا</h2>
+    <div class="card" style="text-align:center">
+      <p>
+        نسعد بمشاركاتكم وأفكاركم
+        التي تسهم في تطوير بيئتنا المدرسية.
+      </p>
+      <p>اسم المدرسة: اكتبي اسم المدرسة هنا</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>منصتنا المدرسية | عطاءٌ يتجدد وإنجازٌ نفخر به</p>
+  <p>جميع الحقوق محفوظة للمدرسة © 2026</p>
+</footer>
 
 </body>
-
 </html>
