@@ -1,277 +1,246 @@
 <!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>منصتنا المدرسية</title>
+
+<title>منصة نشاط الطالبات</title>
 
 <style>
-:root {
-  --main: #386b65;
-  --light: #edf5f1;
-  --accent: #d9b982;
-  --text: #283a37;
-  --white: #ffffff;
-}
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
+
   margin: 0;
+
   font-family: Tahoma, Arial, sans-serif;
-  background: #f7f8f5;
-  color: var(--text);
+
+  background: #f5f3ec;
+
+  color: #29382f;
+
   line-height: 1.9;
+
 }
 
-header {
-  background: var(--white);
-  padding: 18px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  border-bottom: 1px solid #e5eae6;
-}
+.container {
 
-.logo {
-  color: var(--main);
-  font-size: 22px;
-  font-weight: bold;
-}
+  width: min(100% - 30px, 1000px);
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
+  margin: 30px auto;
 
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: var(--main);
 }
 
 .hero {
-  margin: 28px auto;
-  width: 88%;
-  padding: 55px 25px;
+
+  background: linear-gradient(135deg, #42634f, #779783);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 35px 20px;
+
   border-radius: 22px;
-  text-align: center;
-  background: var(--light);
+
 }
 
-.hero h1 {
-  color: var(--main);
-  font-size: 34px;
-  margin: 0 0 12px;
-}
+.hero .symbol { font-size: 38px; }
 
-.hero p {
-  max-width: 650px;
-  margin: 0 auto 22px;
-}
+.hero h1 { font-size: clamp(25px, 5vw, 36px); margin: 0 0 8px; }
 
-.button {
-  display: inline-block;
-  background: var(--main);
-  color: white;
-  text-decoration: none;
-  padding: 10px 24px;
-  border-radius: 9px;
-}
+.hero p { margin: 2px 0; }
 
-section {
-  width: 88%;
-  margin: 45px auto;
-  scroll-margin-top: 20px;
-}
+.info-grid, .vision-grid, .files-grid {
 
-.section-title {
-  text-align: center;
-  color: var(--main);
-  margin-bottom: 25px;
-}
-
-.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
 }
 
-.card {
-  background: var(--white);
-  padding: 24px;
+.info-grid { margin: 22px 0; }
+
+.info-card, .vision-card, .file-card {
+
+  background: white;
+
+  border: 1px solid #e1e6dd;
+
   border-radius: 15px;
-  border: 1px solid #e6ebe7;
-  box-shadow: 0 4px 15px #243c3010;
+
+  padding: 18px;
+
+  box-shadow: 0 3px 12px #263b2c08;
+
 }
 
-.card .icon {
-  font-size: 32px;
-}
+.info-card h3 { color: #557b68; font-size: 15px; margin: 0 0 5px; }
 
-.card h3 {
-  color: var(--main);
-  margin: 8px 0;
-}
+.info-card p { margin: 0; font-weight: bold; }
 
-.card p {
-  font-size: 14px;
-  color: #566560;
-}
+.vision-grid { margin-top: 28px; gap: 16px; }
 
-footer {
-  background: var(--main);
-  color: white;
-  text-align: center;
-  padding: 25px 15px;
-  margin-top: 55px;
-  font-size: 14px;
-}
+.vision-card { padding: 24px; border-top: 4px solid #779783; }
+
+.vision-card h2 { color: #42634f; margin: 0 0 10px; font-size: 23px; }
+
+.vision-card p { margin: 0; }
+
+.section-title { text-align: center; margin: 42px 0 20px; }
+
+.section-title h2 { color: #42634f; font-size: 27px; margin: 0; }
+
+.section-title p { margin: 4px 0 0; color: #68766c; }
+
+.files-grid { gap: 16px; }
+
+.file-card { display: block; text-decoration: none; color: inherit; }
+
+.file-card:hover { transform: translateY(-3px); }
+
+.file-icon { font-size: 30px; }
+
+.file-card h3 { margin: 5px 0; color: #42634f; font-size: 18px; }
+
+.file-card p { color: #557b68; margin: 0; font-weight: bold; font-size: 14px; }
+
+footer { text-align: center; color: #68766c; padding: 30px 10px 15px; font-size: 13px; }
 
 @media (max-width: 600px) {
-  header {
-    justify-content: center;
-    text-align: center;
-  }
 
-  nav {
-    justify-content: center;
-  }
+  .info-grid, .vision-grid, .files-grid { grid-template-columns: 1fr; }
 
-  .hero h1 {
-    font-size: 27px;
-  }
+  .container { margin-top: 15px; }
+
+  .hero { padding: 28px 15px; }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
-<header>
-  <div class="logo">✦ منصتنا المدرسية</div>
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#initiatives">المبادرات</a>
-    <a href="#honors">التكريمات</a>
-    <a href="#activities">الأنشطة</a>
-    <a href="#contact">تواصل معنا</a>
-  </nav>
+<main class="container">
+
+<header class="hero">
+
+  <div class="symbol">🎓</div>
+
+  <h1>منصة نشاط الطالبات</h1>
+
+  <p>المتوسطة الرابعة والبرنامج الفكري</p>
+
+  <p>ب/م خلفة وعلان</p>
+
 </header>
 
-<main>
-  <div class="hero" id="home">
-    <h1>أهلًا بكم في منصتنا المدرسية</h1>
-    <p>
-      مساحة رقمية تجمع مبادراتنا وإنجازاتنا،
-      وتوثّق جهود منسوبات المدرسة،
-      وتحتفي بكل خطوة نحو التميز والإبداع.
-    </p>
-    <a class="button" href="#initiatives">اكتشفي أقسام المنصة</a>
+<section class="info-grid">
+
+  <div class="info-card">
+
+    <h3>رائدة النشاط</h3>
+
+    <p>أ. جبرة عريشي</p>
+
   </div>
 
-  <section id="initiatives">
-    <h2 class="section-title">🌱 المبادرات المدرسية</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="icon">💐</div>
-        <h3>مبادرة شكرًا لكم</h3>
-        <p>
-          تكريم الموظفة المتعاونة أو المتميزة
-          شهريًا تقديرًا لجهودها وعطائها.
-        </p>
-      </article>
+  <div class="info-card">
 
-      <article class="card">
-        <div class="icon">🤝</div>
-        <h3>روح الفريق</h3>
-        <p>
-          تعزيز التعاون وتبادل الخبرات
-          بين منسوبات المدرسة.
-        </p>
-      </article>
+    <h3>مديرة المدرسة</h3>
 
-      <article class="card">
-        <div class="icon">🌟</div>
-        <h3>نحو التميز</h3>
-        <p>
-          تشجيع الأفكار الإبداعية
-          والممارسات المدرسية المتميزة.
-        </p>
-      </article>
-    </div>
-  </section>
+    <p>أ. عائشة حمدي</p>
 
-  <section id="honors">
-    <h2 class="section-title">🏆 التكريمات والإنجازات</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="icon">🌷</div>
-        <h3>موظفة الشهر</h3>
-        <p>
-          نحتفي بالعطاء والإخلاص،
-          ونقدّر كل من تسهم في نجاح مدرستنا.
-        </p>
-      </article>
+  </div>
 
-      <article class="card">
-        <div class="icon">🎖️</div>
-        <h3>إنجازاتنا</h3>
-        <p>
-          توثيق الإنجازات والنجاحات
-          والمشاركات المدرسية المتميزة.
-        </p>
-      </article>
-    </div>
-  </section>
+  <div class="info-card">
 
-  <section id="activities">
-    <h2 class="section-title">🎨 الأنشطة والفعاليات</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="icon">📸</div>
-        <h3>فعاليات المدرسة</h3>
-        <p>
-          مساحة لعرض الفعاليات والمناسبات
-          والتجارب التعليمية المميزة.
-        </p>
-      </article>
+    <h3>إدارة التعليم</h3>
 
-      <article class="card">
-        <div class="icon">📚</div>
-        <h3>المشاركات التعليمية</h3>
-        <p>
-          استعراض المبادرات التعليمية
-          والأنشطة الهادفة والإبداعية.
-        </p>
-      </article>
-    </div>
-  </section>
+    <p>محافظة جازان</p>
 
-  <section id="contact">
-    <h2 class="section-title">📩 تواصل معنا</h2>
-    <div class="card" style="text-align:center">
-      <p>
-        نسعد بمشاركاتكم وأفكاركم
-        التي تسهم في تطوير بيئتنا المدرسية.
-      </p>
-      <p>اسم المدرسة: اكتبي اسم المدرسة هنا</p>
-    </div>
-  </section>
-</main>
+  </div>
+
+  <div class="info-card">
+
+    <h3>المرحلة</h3>
+
+    <p>الصفوف العليا والمرحلة المتوسطة</p>
+
+  </div>
+
+</section>
+
+<section class="vision-grid">
+
+  <article class="vision-card">
+
+    <h2>🌿 الرؤية</h2>
+
+    <p>بناء جيل واعٍ مبدع، يحب وطنه ويعتز بانتمائه، ويسهم بفاعلية في خدمة مجتمعه.</p>
+
+  </article>
+
+  <article class="vision-card">
+
+    <h2>✨ الرسالة</h2>
+
+    <p>تنمية مواهب الطالبات وصقل مهاراتهن عبر برامج نشاط نوعية تواكب رؤية المملكة ٢٠٣٠.</p>
+
+  </article>
+
+</section>
+
+  <section>
+  <div class="section-title">
+    <h2>الوصول السريع</h2>
+    <p>أهم ملفات النشاط وسجلاته في مكان واحد 💡</p>
+  </div>
+
+  <div class="files-grid">
+
+    <a class="file-card" href="files/weekly-plan.pdf" target="_blank">
+      <div class="file-icon">📅</div>
+      <h3>الخطة الأسبوعية</h3>
+      <p>عرض الخطة ←</p>
+    </a>
+
+    <a class="file-card" href="files/activity-records.pdf" target="_blank">
+      <div class="file-icon">📂</div>
+      <h3>سجلات النشاط</h3>
+      <p>عرض السجلات ←</p>
+    </a>
+
+    <a class="file-card" href="files/term-plan.pdf" target="_blank">
+      <div class="file-icon">🗓️</div>
+      <h3>الخطة الفصلية</h3>
+      <p>عرض الخطة ←</p>
+    </a>
+
+    <a class="file-card" href="files/monthly-reports.pdf" target="_blank">
+      <div class="file-icon">📊</div>
+      <h3>التقارير الشهرية</h3>
+      <p>عرض التقارير ←</p>
+    </a>
+
+  </div>
+</section>
 
 <footer>
-  <p>منصتنا المدرسية | عطاءٌ يتجدد وإنجازٌ نفخر به</p>
-  <p>جميع الحقوق محفوظة للمدرسة © 2026</p>
+  منصة نشاط الطالبات
+  <br>
+  المتوسطة الرابعة والبرنامج الفكري — ب/م خلفة وعلان
 </footer>
 
+</main>
 </body>
 </html>
